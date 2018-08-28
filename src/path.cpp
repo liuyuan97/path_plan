@@ -197,8 +197,9 @@ void Path::predict (nlohmann::basic_json<> sensor_fusion, double car_s, int prev
 
     if (no_front_car) {
     	// no car in the front of the car lane; keep the same lane and increase the speed if not reach maximum.
-    	if (ctrl_vel + vel_inc < max_vel) {
-    		ctrl_vel += vel_inc;
+    	ctrl_vel += vel_inc;
+    	if (ctrl_vel > max_vel) {
+    		ctrl_vel = max_vel;
     	}
     	return;
     }

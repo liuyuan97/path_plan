@@ -16,7 +16,7 @@ public:
     static constexpr  int lane_width = 4; // assume the lane width is 4 meters
     static constexpr  int half_lane_width = lane_width / 2;    
     static constexpr  double max_vel = 49.5  * 0.44704; // maximum velocity is 50 mile per hour; use 49.5 to add small margin, and convert to meter per second
-    static constexpr  double vel_inc = 0.44704; // the veloctiy increment for one path plan sample time; 
+    static constexpr  double vel_inc = 0.3; // the veloctiy increment for one path plan sample time; 
     static constexpr  double lane_num = 3;  // assume there are three lanes; the leftmost is 0, the middle is 1, and the rightmost is 2.
     static constexpr  double safe_dis = 30.0; // the safe distance used to control the car
     // Constructor.
